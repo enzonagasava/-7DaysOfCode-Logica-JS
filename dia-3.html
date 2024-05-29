@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Desafio 3</title>
+</head>
+<body>
+    <script>
+        
+        let p1 = prompt('Olá, qual a área que você quer seguir? back-end ou front-end?')
+
+        if (p1 == "back-end"){
+            linguagem = prompt("Que legal saber que você quer seguir na área de back-end, agora me fale, você que aprender c# ou java?")
+        } else if (p1 == "front-end") {
+            linguagem = prompt("Que legal saber que você quer seguir na área de front-end, agora me fale, você que aprender react ou value?")
+        } else {
+            alert(`Desculpe, eu não conheço ${p1} `)
+        }
+
+        const especialidade = prompt(`Digite 1 para se especializar na sua linguagem ${linguagem} ou digite 2 para você se tornar um Full-stack?`)
+
+        if (especialidade == "1" ) {
+            alert(`Continue estudando ${linguagem} para se especializar na ${p1}`)
+        } else if (especialidade == "2") {
+            alert(`Chegou a hora de você aprender outra lingua além de ${linguagem}, para poder se tornar um ${especialidade}`)
+        } else {
+            alert("Informação inválida")
+        }
+
+        let mensagem = prompt("Tem mais alguma outra linguagem que você gostaria de aprender? Digite 'ok' em caso de positivo")
+
+        while (mensagem == "ok") {
+            let novaTecnologia = prompt("Qual?")
+            alert(`${novaTecnologia} é realmente muito legal.`)
+            mensagem = prompt("Teria mais alguma outra linguagem que você gostaria de aprender?")
+        }
+    </script>
+</body>
+</html>
