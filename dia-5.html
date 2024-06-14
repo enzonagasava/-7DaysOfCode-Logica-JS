@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>dia-5</title>
+</head>
+<body>
+    <script>
+    let congelados = []
+    let frutas = []
+    let laticinios = []
+    let doces = []
+    const categorias = ["frutas", "laticinios", "congelados", "doces"]
+    let num = '10'
+
+    while (num == '10'){
+        let pergunta1 = prompt("Ola, você deseja adicionar uma comida na sua lista de compras?")
+    
+    if (pergunta1 == 'sim'){
+        pergunta2 = prompt("Qual comida você deseja inserir?")
+    } else if (pergunta1 == 'não'){
+        num = '10' 
+        alert(`Lista de compras:    
+                    Frutas: ${frutas}
+                    Laticinios: ${laticinios}
+                    Congelados: ${congelados}
+                    Doces: ${doces}`)
+        break;       
+    }
+
+    const pergunta3 = prompt(`Em qual categoria o ${pergunta2} se encaixa? ${categorias}`)
+
+    if(pergunta3 == "frutas"){
+        frutas[frutas.length] = pergunta2
+
+        alert(frutas)
+    } else if (pergunta3 == "laticinios"){
+        laticinios[laticinios.length] = pergunta2
+
+        alert(laticinios)
+    } else if (pergunta3 == "congelados"){
+        congelados[congelados.length] = pergunta2
+
+        alert(congelados)
+    } else if (pergunta3 == "doces"){
+        doces[doces.length] = pergunta2
+
+        alert(doces)
+    }
+    }
+
+    </script>
+</body>
+</html>
